@@ -1,0 +1,32 @@
+FUNCTION pd(v1,v2:ARRAY_OF INTEGER) : INTEGER
+VAR
+    dot:INTEGER:=0
+BEGIN
+FOR i FROM 0 TO v1.length-1 STEP 1  DO
+     dot:= dot+v1[i]*v2[i]
+END_FOR
+    
+    RETURN dot ;
+END
+ALGORITHM k
+VAR
+
+    
+BEGIN
+    
+Read(n)
+FOR i FROM 0 TO n-1 STEP 1 DO
+    Read(v1[i]);
+
+END_FOR
+FOR i FROM 0 TO n-1 STEP 1 DO
+    Read(v2[i]);
+    END_FOR
+        s:=pd(v1,v2)
+    
+    IF (s=0) THEN
+      Write('ortho')
+      ELSE
+       Write(' n est pas ortho')
+    END_IF
+END
